@@ -1,0 +1,322 @@
+@font-face {
+  font-family: "Lato";
+  src: url("../fonts/Lato Hairline.ttf");
+  font-weight: 100;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Lato";
+  src: url("../fonts/Lato Thin.ttf");
+  font-weight: 200;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Lato";
+  src: url("../fonts/Lato Light.ttf");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Lato";
+  src: url("../fonts/Lato Regular.ttf");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Lato";
+  src: url("../fonts/Lato Italic.ttf");
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Lato";
+  src: url("../fonts/Lato Medium.ttf");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Lato";
+  src: url("../fonts/Lato Semibold.ttf");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Lato";
+  src: url("../fonts/Lato Bold.ttf");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Lato";
+  src: url("../fonts/Lato Heavy.ttf");
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Lato";
+  src: url("../fonts/Lato Black.ttf");
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+html,
+body {
+  overflow-x: hidden;
+  height: auto;
+}
+
+* {
+  box-sizing: border-box;
+  font-family: "Lato", sans-serif;
+}
+
+/* CSS của bạn */
+
+.header {
+  background-color: transparent; /* Ban đầu trong suốt */
+  transition: all 0.3s ease; /* Hiệu ứng mượt mà */
+}
+
+.header.scrolled {
+  background-color: aqua !important; /* Màu bạn chọn */
+  padding-top: 10px !important; /* Thu nhỏ header cho gọn */
+  padding-bottom: 10px !important;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Section-5 */
+.swiper-section-5 {
+  margin-top: 24px;
+  margin-bottom: 24px;
+  position: relative;
+  z-index: 20;
+}
+
+.swiper2-section-5 {
+  overflow: visible !important;
+  position: relative;
+}
+
+.swiper2-section-5 .swiper-slide {
+  overflow: visible !important;
+}
+
+/* Fix for the narrow strip image issue */
+.swiper2-section-5 .swiper-slide .flex > div:first-child {
+  width: 35% !important;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+}
+
+.swiper2-section-5 .swiper-slide img {
+  width: 100%;
+  height: auto;
+  min-height: 250px;
+  max-height: 522px;
+  object-fit: cover;
+  border-radius: 25px;
+  box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* Section 5 Swiper Buttons */
+.section-5 .swiper-button-prev,
+.section-5 .swiper-button-next {
+  width: 54px !important;
+  height: 54px !important;
+  background: #fff !important;
+  border-radius: 50% !important;
+  box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.15) !important;
+  top: 50% !important;
+  transform: translateY(-50%);
+  z-index: 30;
+}
+
+.section-5 .swiper-button-prev {
+  left: -27px !important;
+}
+
+.section-5 .swiper-button-next {
+  right: -27px !important;
+}
+
+.section-5 .swiper-button-prev img,
+.section-5 .swiper-button-next img {
+  width: 20px;
+  height: 20px;
+  object-fit: contain;
+}
+
+.swiper-section-5 .swiper-slide-thumb-active span {
+  color: #252525 !important;
+}
+
+/* Responsive adjustments for Section 5 */
+/* Responsive adjustments for Section 5 */
+@media (max-width: 1408px) {
+  /* Hide background image, navigation buttons and top menu on screens up to 1408px */
+  .section-5 .absolute.inset-0.z-0,
+  .section-5 .swiper-button-prev,
+  .section-5 .swiper-button-next,
+  .swiper-section-5 {
+    display: none !important;
+  }
+
+  /* Clip adjacent slides to show only one item at a time */
+  .swiper2-section-5,
+  .swiper2-section-5 .swiper-slide {
+    overflow: hidden !important;
+  }
+
+  /* Change text color to dark for readability without the purple background */
+  .swiper2-section-5 .swiper-slide p,
+  .swiper2-section-5 .swiper-slide .text-white {
+    color: #252525 !important;
+  }
+
+  /* Ensure the main title is centered and fits on screen */
+  .section-5 h2 {
+    padding-left: 16px !important;
+    padding-right: 16px !important;
+    text-align: center;
+    font-size: 24px !important;
+    width: 100% !important;
+    margin-bottom: 24px !important;
+    margin-top: 0 !important;
+  }
+
+  /* Minimalist refinement for Mobile - Further reducing font size */
+  @media (max-width: 768px) {
+    .section-5 h2 {
+      font-size: 20px !important;
+      margin-bottom: 16px !important;
+    }
+  }
+
+  .swiper2-section-5 .swiper-slide .flex {
+    flex-direction: column;
+    padding-left: 24px;
+    padding-right: 24px;
+    align-items: center;
+    row-gap: 20px;
+  }
+
+  .swiper2-section-5 .swiper-slide .flex > div:first-child {
+    width: 100% !important;
+    margin-top: 0 !important; /* Remove negative margin on mobile */
+  }
+
+  .swiper2-section-5 .swiper-slide .flex > div:last-child {
+    width: 100% !important;
+    padding: 0 !important;
+    text-align: center;
+    padding-bottom: 40px !important;
+    padding-top: 10px !important;
+  }
+}
+/* End Section-5 */
+
+/* ẩn icon mặc định*/
+.section-11 .swiper-button-next::after,
+.section-11 .swiper-button-prev::after,
+.section-10 .swiper-button-next::after,
+.section-10 .swiper-button-prev::after,
+.section-7 .swiper-button-next::after,
+.section-7 .swiper-button-prev::after,
+.section-5 .swiper-button-next::after,
+.section-5 .swiper-button-prev::after {
+  display: none;
+}
+
+/*  Tùy chỉnh kích thước nút */
+.section-11 .swiper-button-next,
+.section-11 .swiper-button-prev,
+.section-10 .swiper-button-next,
+.section-10 .swiper-button-prev,
+.section-7 .swiper-button-next,
+.section-7 .swiper-button-prev,
+.section-5 .swiper-button-next,
+.section-5 .swiper-button-prev {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #fff;
+  box-shadow: 0px 4px 12px 0px #00000014;
+}
+
+/* Đảm bảo ảnh hiển thị đúng */
+.section-11 .swiper-button-next img,
+.section-11 .swiper-button-prev img,
+.section-10 .swiper-button-next img,
+.section-10 .swiper-button-prev img,
+.section-7 .swiper-button-next img,
+.section-7 .swiper-button-prev img,
+.section-5 .swiper-button-next img,
+.section-5 .swiper-button-prev img {
+  width: 50%;
+  height: 50%;
+  object-fit: contain;
+}
+
+/* CUSTOM PAGINATION */
+
+.section-11 .swiper-pagination-bullet {
+  width: 18px;
+  height: 7px;
+  border-radius: 4px;
+  background-color: #ebebeb;
+}
+
+.section-7 .swiper-pagination-bullet {
+  width: 18px;
+  height: 7px;
+  border-radius: 4px;
+  background-color: #d4d4d4;
+}
+
+.section-11 .swiper-pagination-bullet-active {
+  width: 60px;
+  background: linear-gradient(135deg, #3eed8b 0%, #0a9949 100%);
+}
+
+.section-7 .swiper-pagination-bullet-active {
+  width: 60px;
+  background: linear-gradient(90deg, #fbc2eb 0%, #a18cd1 100%);
+}
+
+.swiper-section-10 {
+  max-width: 1200px; /* Hoặc con số bạn muốn cụm slide hiển thị trong đó */
+  margin: 0 auto; /* Căn giữa toàn bộ slider */
+  overflow: hidden; /* Cắt các slide tràn ra ngoài */
+}
+
+.section-10 .swiper-pagination-bullet {
+  width: 18px;
+  height: 7px;
+  border-radius: 4px;
+  background-color: #d4d4d4;
+}
+
+.section-10 .swiper-pagination-bullet-active {
+  width: 60px;
+  background: linear-gradient(90deg, #fbc2eb 0%, #a18cd1 100%);
+}
