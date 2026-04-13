@@ -172,11 +172,15 @@ const swiperSection10 = new Swiper(".swiper-section-10", {
       slidesPerView: 4, // Hiện 4 khối trên màn hình lớn
       spaceBetween: 20,
     },
-    1240: {
-      slidesPerView: 4, // Hiện 4 khối trên màn hình lớn
+    992: {
+      slidesPerView: 3, // Hiện 3 khối trên màn hình lớn
       spaceBetween: 0,
     },
     768: {
+      slidesPerView: 3, // Hiện 3 khối trên Tablet
+      spaceBetween: 0,
+    },
+    576: {
       slidesPerView: 2, // Hiện 2 khối trên Tablet
       spaceBetween: 0,
     },
