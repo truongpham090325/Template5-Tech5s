@@ -112,7 +112,8 @@ body {
 }
 
 .swiper2-section-5 {
-  overflow: visible !important;
+  overflow-x: clip !important;
+  overflow-y: visible !important;
   position: relative;
 }
 
@@ -146,17 +147,17 @@ body {
   background: #fff !important;
   border-radius: 50% !important;
   box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.15) !important;
-  top: 50% !important;
+  top: calc(50% + 40px) !important;
   transform: translateY(-50%);
   z-index: 30;
 }
 
 .section-5 .swiper-button-prev {
-  left: -27px !important;
+  left: 55px !important;
 }
 
 .section-5 .swiper-button-next {
-  right: -27px !important;
+  right: 55px !important;
 }
 
 .section-5 .swiper-button-prev img,
