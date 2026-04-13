@@ -290,6 +290,8 @@ body {
   height: 7px;
   border-radius: 4px;
   background-color: #d4d4d4;
+  box-shadow: 6px 8px 48px 0px #00000014;
+  opacity: 1;
 }
 
 .section-11 .swiper-pagination-bullet-active {
